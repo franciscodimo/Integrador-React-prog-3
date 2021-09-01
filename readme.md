@@ -1,1 +1,0 @@
-Maqueta html para proyecto React de Programación 3, UdeSA.
