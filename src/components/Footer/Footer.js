@@ -4,11 +4,12 @@ function Footer (){
     return(
         <footer>
         <ul class="team">
-            <li>Nombre integrante 1</li>
-            <li>Nombre integrante 2</li>
-            <li>Nombre integrante 3</li>
+            <li>Francisco Dimo</li>
+            <li>Tomás Henschien</li>
+            <li>Andres Chiavelli</li>
         </ul>
     </footer>
     )
 }
+
 export default Footer;
