@@ -7,18 +7,17 @@ import Header from '../src/components/Header/Header';
 function App() {
   return(
     <body>
+
       <Header />
+
       <section className="card-container">
+
         <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
+
       </section >
-        <Footer />
+
+      <Footer />
+
     </body>
   );
 }
