@@ -1,1 +1,0 @@
-Carpeta para las imágenes generales.
