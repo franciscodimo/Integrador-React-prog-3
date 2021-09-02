@@ -5,11 +5,13 @@ import Header from '../src/components/Header/Header';
 
 
 function App() {
-    return(
-        <div className="row">
-      </div>
-
-    )
+  return(
+    <Header />
+        <section className="card-container">
+          <Tarjetas />
+        <section />
+          <Footer />
+  )
 }
 
 export default App;
