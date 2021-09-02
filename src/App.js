@@ -6,12 +6,21 @@ import Header from '../src/components/Header/Header';
 
 function App() {
   return(
-    <Header />
-        <section className="card-container">
-          <Tarjetas />
-        <section />
-          <Footer />
-  )
+    <body>
+      <Header />
+      <section className="card-container">
+        <Tarjetas />
+        <Tarjetas />
+        <Tarjetas />
+        <Tarjetas />
+        <Tarjetas />
+        <Tarjetas />
+        <Tarjetas />
+        <Tarjetas />
+      </section >
+        <Footer />
+    </body>
+  );
 }
 
 export default App;
