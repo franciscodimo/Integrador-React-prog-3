@@ -1,0 +1,16 @@
+article{
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 21%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+}
+article img{
+    width: 100%;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+article:hover{
+box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
+}
