@@ -14,11 +14,8 @@ function App() {
       
       <button type="button">Cargar más tarjetas</button>
 
-      <section className="card-container">
-
         <Artistas />
-
-      </section >
+      
       <footer>
         <Footer /> 
       </footer>
