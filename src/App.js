@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../src/components/Footer/Footer';
-import Tarjetas from '../src/components/Tarjetas/Tarjetas';
+import Artistas from '../src/components/Artistas/Artistas';
 import Header from '../src/components/Header/Header';
 import './style.css'
 
@@ -16,14 +16,7 @@ function App() {
 
       <section className="card-container">
 
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
-        <Tarjetas />
+        <Artistas />
 
       </section >
       <footer>
