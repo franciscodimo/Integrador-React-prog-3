@@ -5,10 +5,8 @@ class Card extends Component{
     constructor(props){
         super(props)
         this.state={
-
         }
     }
-
     render(){
         return(
             <article>
@@ -20,8 +18,8 @@ class Card extends Component{
                     <i className="far fa-window-close"></i>
                 </section>
                 <main>
-                    <img src="/assets/img/image-default.png" alt=""/>
-                    <h3>Título/ Nombre</h3>
+                    <img src={this.props.dataArtistas.picture} alt=""/>
+                    <h3>{this.props.dataArtistas.name}</h3>
                     <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                     <section className="aditional-info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
@@ -32,7 +30,6 @@ class Card extends Component{
                 </main>
             </article>
     )}
-    
-}
+        }
 
-export default Card;          
+  export default Card;          
