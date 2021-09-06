@@ -24,6 +24,7 @@ class Artistas extends Component{
             })
             .catch(error => console.log(error))
     }
+
     addMore(){
         let url = this.state.nextUrl;
 
@@ -37,7 +38,8 @@ class Artistas extends Component{
                 })
             })
             .catch( error => console.log(error))
-        }
+    }
+
     deleteCard(artistasABorrar){
         let artistasQueQuedan = this.state.artistas.filter( artista => artista.id !== artistasABorrar );
 
@@ -49,10 +51,9 @@ class Artistas extends Component{
     render(){
         return(
             <React.Fragment>
-                 <button onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
-           
+            <h3 className="momento">Los Artistas del momento!</h3>
+            <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
             <section className="card-container">
-
                 {/* para que imprima la cantidad de información que tenemos en el fetch */}
                 {this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)}                    
               

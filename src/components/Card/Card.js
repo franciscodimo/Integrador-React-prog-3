@@ -9,6 +9,7 @@ class Card extends Component{
             verMas: false,
         }
     }
+    
     verMas(){
         if(this.state.verMas){
             this.setState({
@@ -28,20 +29,21 @@ class Card extends Component{
                 <section className="navigation">
                     <div>
                         <i className="fas fa-chevron-left"></i>
+                        <i className="far fa-window-close" onClick={()=>this.props.remove(this.props.dataArtistas.id)}></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    <i className="far fa-window-close" onClick={()=>this.props.remove(this.props.dataArtistas.id)}></i>
+                    
                 </section>
                 <main>
                     <img src={this.props.dataArtistas.picture} alt=""/>
                     <h3>{this.props.dataArtistas.name}</h3>
-                    <p className={`extra ${this.state.verMas ? 'show' : 'hide'}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
-                    <section className="aditional-info">
+                    <p className="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+                    <section className={`additional-info ${this.state.verMas ? 'show' : 'hide'}`}>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                     </section>
-                    <button onClick={()=>this.verMas()}>{this.state.text}</button>
+                    <button className="verMas" onClick={()=>this.verMas()}>{this.state.text}</button>
 
                 </main>
             </article>
