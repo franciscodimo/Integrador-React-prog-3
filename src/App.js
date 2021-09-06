@@ -12,7 +12,6 @@ function App() {
         <Header />
       </header>
       
-      <button type="button">Cargar más tarjetas</button>
 
         <Artistas />
       

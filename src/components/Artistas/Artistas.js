@@ -6,7 +6,8 @@ class Artistas extends Component{
     constructor(){
         super()
         this.state={
-            artistas: [],
+         artistas: [],
+         nextUrl: ''
         }
     }
 
@@ -23,13 +24,40 @@ class Artistas extends Component{
             })
             .catch(error => console.log(error))
     }
+    addMore(){
+        let url = this.state.nextUrl;
+
+        fetch(url)
+            .then( response => response.json() )
+            .then( data => {
+                console.log(data);
+                this.setState({
+                    artistas: this.state.artistas.concat(data.data),
+                    nextUrl:data.info.next
+                })
+            })
+            .catch( error => console.log(error))
+        }
+    deleteCard(artistasABorrar){
+        let artistasQueQuedan = this.state.artistas.filter( artista => artista.id !== artistasABorrar );
+
+        this.setState({
+            artistas: artistasQueQuedan
+        })
+    }
 
     render(){
         return(
+            <React.Fragment>
+                 <button onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
+           
             <section className="card-container">
+
                 {/* para que imprima la cantidad de información que tenemos en el fetch */}
-                {this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista}/>)}                    
+                {this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)}                    
+              
             </section>
+            </React.Fragment>
         )
     }
 }
