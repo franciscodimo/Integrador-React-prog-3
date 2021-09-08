@@ -55,7 +55,7 @@ class Artistas extends Component{
         let artistasFiltrados = this.state.artistasIniciales.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase()));
     
        if (artistasFiltrados === null){
-        <p>No se encontraron resultados en su busqueda</p>
+        window.alert("No se encontraron resultados de busqueda");
        }
        
        else{
