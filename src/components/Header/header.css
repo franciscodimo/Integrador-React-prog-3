@@ -13,6 +13,7 @@ h1.nombreApp {
 
 i.fa-align-justify {
     margin-right: 10px;
+    flex-direction: row;
 }
 
 i.fa-th {
@@ -21,4 +22,7 @@ i.fa-th {
 
 p.ordenar {
     margin-right: 50px;
+}
+.nombreAPP{
+    border-style: solid;
 }

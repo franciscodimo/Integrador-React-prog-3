@@ -4,7 +4,7 @@ import '../Footer/footer.css'
 function Footer (){
     return(
 
-            <ul class="team">
+            <ul className="team">
                 <li>Francisco Dimo</li>
                 <li>Tomás Henschien</li>
                 <li>Andres Chiavelli</li>

@@ -1,13 +1,15 @@
 import React,{Component} from 'react'
 import Card from '../Card/Card'
 import './artistas.css'
+import Header from '../Header/Header';
 
 class Artistas extends Component{
     constructor(){
         super()
         this.state={
          artistas: [],
-         nextUrl: ''
+         proximaUrl: '',
+         artistasIniciales:[],
         }
     }
 
@@ -20,21 +22,22 @@ class Artistas extends Component{
                 console.log(data);
                 this.setState({     //setState para que se actualicen los artistas
                     artistas:  data.data,
+                    artistasIniciales: data.data,
                 })   
             })
             .catch(error => console.log(error))
     }
 
     addMore(){
-        let url = this.state.nextUrl;
+        let proximaUrl = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists&top?limit=20';
 
-        fetch(url)
+        fetch(proximaUrl)
             .then( response => response.json() )
             .then( data => {
                 console.log(data);
                 this.setState({
                     artistas: this.state.artistas.concat(data.data),
-                    nextUrl:data.info.next
+                    proximaUrl:data.data,
                 })
             })
             .catch( error => console.log(error))
@@ -47,10 +50,14 @@ class Artistas extends Component{
             artistas: artistasQueQuedan
         })
     }
-
+    
     render(){
         return(
             <React.Fragment>
+                  <div className="row card-container">
+                    <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)}/>
+                    </div>
+                    <div className="row card-container"></div>
             <h3 className="momento">Los Artistas del momento!</h3>
             <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
             <section className="card-container">
