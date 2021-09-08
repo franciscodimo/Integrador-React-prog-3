@@ -51,6 +51,19 @@ class Artistas extends Component{
         })
     }
     
+    filtrarArtistas(text){
+        let artistasFiltrados = this.state.artistasIniciales.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase()));
+    
+       if (artistasFiltrados === null){
+        <p>No se encontraron resultados en su busqueda</p>
+       }
+       
+       else{
+        this.setState({
+            artistas: artistasFiltrados  })
+       }
+    }
+
     render(){
         return(
             <React.Fragment>
