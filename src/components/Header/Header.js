@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import '../Header/header.css';
 import '../Artistas/Artistas';
 
+
 class Header extends Component{
     constructor(){
         super();
         this.state ={
-            filterBy:''
+            filterBy:'',
+            botonRow: false,
+             }
         }
-    }
     evitarSubmit(e){
         e.preventDefault();
         console.log('Evitando el envío')

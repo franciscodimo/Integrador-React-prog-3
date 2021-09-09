@@ -13,6 +13,9 @@ h1.nombreApp {
 
 i.fa-align-justify {
     margin-right: 10px;
+   
+}
+i.card-container{
     flex-direction: row;
 }
 

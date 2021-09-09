@@ -54,17 +54,12 @@ class Artistas extends Component{
     }
     
     filtrarArtistas(text){
-        let artistasFiltrados = this.state.artistasIniciales.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase()));
-    
-       if (artistasFiltrados === null){
-        window.alert("No se encontraron resultados de busqueda");
-       }
-       
-       else{
-        this.setState({
+        let artistasFiltrados = this.state.artistas.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase()));
+         this.setState({
             artistas: artistasFiltrados  })
-       }
+       
     }
+
 
     //si borro un artista y lo busco, vuelve a aparecer
     //si pongo "más artistas" y luegolo busco, no aparece
@@ -89,6 +84,12 @@ class Artistas extends Component{
                         this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)
                     }
                     </section>
+                    {
+                        this.state.artistas.length === 0 ?
+                        <p>No se encontraron resultados de busqueda</p>:
+                        ''
+
+                    }
             
                 </div>
             </React.Fragment>
