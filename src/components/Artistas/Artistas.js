@@ -14,7 +14,7 @@ class Artistas extends Component{
     }
 
     componentDidMount(){
-        let url = 'https://cors-anywhere.herokuapp.com/https://developers.deezer.com/api/explorer?url=chart/0/artists';
+        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=10';
 
         fetch(url)
             .then( response => response.json() )
@@ -29,7 +29,7 @@ class Artistas extends Component{
     }
 
     addMore(){
-        let proximaUrl = 'https://cors-anywhere.herokuapp.com/https://developers.deezer.com/api/explorer?url=chart/0/artists';
+        let proximaUrl = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=20';
 
         fetch(proximaUrl)
             .then( response => response.json() )
