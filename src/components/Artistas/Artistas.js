@@ -10,6 +10,7 @@ class Artistas extends Component{
          artistas: [],
          proximaUrl: '',
          artistasIniciales:[],
+         isLoaded: false  //cuando se renderiza, al principio no hay ningún dato
         }
     }
 
@@ -23,6 +24,7 @@ class Artistas extends Component{
                 this.setState({     //setState para que se actualicen los artistas
                     artistas:  data.data,
                     artistasIniciales: data.data,
+                    isLoaded: true
                 })   
             })
             .catch(error => console.log(error))
@@ -64,20 +66,31 @@ class Artistas extends Component{
        }
     }
 
+    //si borro un artista y lo busco, vuelve a aparecer
+    //si pongo "más artistas" y luegolo busco, no aparece
+
     render(){
         return(
             <React.Fragment>
-                  <div className="row card-container">
+             
+                <div className="row card-container">
                     <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)}/>
-                    </div>
-                    <div className="row card-container"></div>
-            <h3 className="momento">Los Artistas del momento!</h3>
-            <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
-            <section className="card-container">
-                {/* para que imprima la cantidad de información que tenemos en el fetch */}
-                {this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)}                    
-              
-            </section>
+                </div>
+                <div className="row card-container">
+                    
+                    <h3 className="momento">Los Artistas del momento!</h3>
+                    <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
+                    <section className="card-container">
+                    {
+                        this.state.isLoaded === false ? 
+                        
+                        <h2>Cargando artistas...</h2> :
+                        
+                        this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)
+                    }
+                    </section>
+            
+                </div>
             </React.Fragment>
         )
     }
