@@ -1,5 +1,7 @@
 body{
-    background-color:burlywood;
+    background-image: linear-gradient(white,rgb(150, 169, 230), rgb(83, 116, 224), rgb(115, 141, 228));
+    margin: 0 0 0 0;
+    display: block;
 }
 .fasfa-align-justify{
     flex-direction: row;

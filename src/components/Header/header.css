@@ -7,24 +7,31 @@ section {
     justify-content: space-around;
 }
 
-h1.nombreApp {
+img {
     margin: auto auto auto 0;
+    width: 20%;
 }
 
-i.fa-align-justify {
-    margin-right: 10px;
+a i.fa-align-justify {
+    margin-right: 20px;
+    margin-top: 2px;
+    color: black;
    
 }
 i.card-container{
     flex-direction: row;
 }
 
-i.fa-th {
-    margin-right: 30px;
+a i.fa-th {
+    margin-right: 40px;
+    margin-top: 2px;
+    color: black;
 }
 
 p.ordenar {
-    margin-right: 50px;
+    margin-right: 60px;
+    margin-top: 2px;
+    margin-bottom: 0;
 }
 .nombreAPP{
     border-style: solid;

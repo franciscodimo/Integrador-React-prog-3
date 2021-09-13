@@ -18,6 +18,8 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 
 .show{
     display: block;
+    padding: 0.5x;
+    text-align: center;
 }
 .hide{
     display: none;
@@ -32,6 +34,15 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 button.verMas {
     width: 50%;
     margin-left: 69px;
+    transition-duration: 0.2s;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(150, 169, 230); 
+}
+
+button.verMas:hover {
+    background-color: rgb(150, 169, 230);
+    color: white;
 }
 
 .fa-chevron-right {

@@ -6,9 +6,6 @@ import './style.css'
 function App() {
   return(
     <body>
-      <header>
-        
-      </header>
       <br/>
         <Artistas />
       <br/>

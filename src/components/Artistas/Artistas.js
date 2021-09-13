@@ -80,13 +80,13 @@ class Artistas extends Component{
         return(
             <React.Fragment>
              
-                <div className="row card-container">
+                <div className="header">
                     <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)} botonRow= { (botonRow) => this.botonRow(botonRow)}  boton = {this.state.botonRow}/>
 
                 </div>
                 <div className="row card-container">
                     
-                    <h3 className="momento">Los Artistas del momento!</h3>
+                    <h2 className="momento">Los Artistas del momento!</h2>
 
                     <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
                     <section className={this.state.botonRow ? 'flex' : "card-container"} >
@@ -100,7 +100,7 @@ class Artistas extends Component{
                     </section>
                     {
                         this.state.artistas.length === 0 ?
-                        <p>No se encontraron resultados de busqueda</p>:
+                        <p className="noEncuentra">No se encontraron resultados de busqueda. Intenta otro nombre!</p>:
                         ''
 
                     }

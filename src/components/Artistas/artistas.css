@@ -1,3 +1,14 @@
+div.header{
+    background-color: rgb(150, 169, 230);
+    padding: 15px 30px 15px 35px;
+    margin-left: 20px;
+    width: 92%;
+    align-content: center;
+    justify-content: space-around;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+
 button.masArtistas {
     display: flex;
     flex-wrap: wrap;
@@ -5,10 +16,27 @@ button.masArtistas {
     align-items: center;
     margin-left: 91%;
     margin-bottom: 10px;
+    padding: 6px;
+    background-color: rgb(150, 169, 230);
+    border-radius: 2px;
+    border: 2px solid rgb(150, 169, 230); 
 }
 
-h3.momento {
+button.masArtistas:hover {
+    box-shadow: 0px 6px 8px 0 rgba(0,0,0,0.24), 0px 6px 9px 0 rgba(0,0,0,0.19);
+}
+
+p.noEncuentra {
+    margin-left: 20px;
+    padding: 5px;
+    margin-right: 600px;
+    color: black;
+    font-weight: bold;
+}
+
+h2.momento {
     margin-bottom: 0;
+    margin-left: 1.5%;
 }
 
 .flex{
@@ -16,9 +44,7 @@ h3.momento {
     flex-direction: column;
 
 }
-.card-container{
-   
-}
+
 .flex article{
     display: flex;
     width: 80%;

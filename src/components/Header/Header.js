@@ -23,22 +23,20 @@ class Header extends Component{
         
     }
 
-    render(){
-          
-        return(
-            
+    render(){  
+        return( 
+
             <section>
-                <h1 className="nombreApp">Título/ Nombre de la app</h1>
+                <img src='../assets/img/eMusic.png' alt=""/>
                 <p className="ordenar">Ordenar ASC/ DESC</p>
-                <i className="fas fa-align-justify"onClick={()=>this.props.botonRow(this.props.boton)}></i>
-                <i className="fas fa-th"onClick={()=>this.props.botonRow(this.props.boton)}></i>
+                <a href="/"><i className="fas fa-align-justify"onClick={()=>this.props.botonRow(this.props.boton)}></i></a>
+                <a href="/"><i className="fas fa-th"onClick={()=>this.props.botonRow(this.props.boton)}></i></a>
                 <form action="Buscar por Nombre" onSubmit={(milanesa)=>this.evitarSubmit(milanesa)}>
                 <input type="text" onChange={(papas)=>this.controlarCambios(papas)} value={this.state.filterBy} placehoder='ingrese su nombre'/>
                 </form>
-            </section>
+            </section> 
             
         )
-        
     }
 
 }
