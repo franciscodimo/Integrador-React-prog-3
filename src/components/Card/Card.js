@@ -30,7 +30,7 @@ class Card extends Component{
                 <section className="navigation">
                     <div>
                         <i className="fas fa-chevron-left"></i>
-                        <i className="far fa-window-close" onClick={()=>this.props.remove(this.props.dataArtistas.id)}></i>
+                        <i className="far fa-window-close" onClick={()=>this.props.remove(this.props.dataArtistas.id)} ></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
                     

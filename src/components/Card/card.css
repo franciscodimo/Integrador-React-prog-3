@@ -2,7 +2,7 @@ article{
     padding: 10px;
     margin-bottom: 20px;
     width: 21%;
-    background: #fff;
+    background-color: powderblue;
     border-radius: 5px;
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
 }
@@ -41,7 +41,7 @@ button.verMas {
 }
 
 button.verMas:hover {
-    background-color: rgb(150, 169, 230);
+    background-color: rgb(102, 133, 236);
     color: white;
 }
 

@@ -46,6 +46,7 @@ class Artistas extends Component{
     }
    
     botonRow(botonRow){
+        console.log("funciona")
         if(botonRow){
             this.setState({
                 botonRow: false,
@@ -80,13 +81,13 @@ class Artistas extends Component{
         return(
             <React.Fragment>
              
-                <div className="header">
+                <div className="row header">
                     <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)} botonRow= { (botonRow) => this.botonRow(botonRow)}  boton = {this.state.botonRow}/>
 
                 </div>
                 <div className="row card-container">
                     
-                    <h2 className="momento">Los Artistas del momento!</h2>
+                    <h2 className="momento">Los Artistas del momento</h2>
 
                     <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
                     <section className={this.state.botonRow ? 'flex' : "card-container"} >
