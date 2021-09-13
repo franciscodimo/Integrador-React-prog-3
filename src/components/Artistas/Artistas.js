@@ -15,7 +15,7 @@ class Artistas extends Component{
     }
 
     componentDidMount(){
-        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=10';
+        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=';
 
         fetch(url)
             .then( response => response.json() )
@@ -31,7 +31,7 @@ class Artistas extends Component{
     }
 
     addMore(){
-        let proximaUrl = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=20';
+        let proximaUrl = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=30';
 
         fetch(proximaUrl)
             .then( response => response.json() )
@@ -86,7 +86,7 @@ class Artistas extends Component{
                 </div>
                 <div className="row card-container">
                     
-                    <h3 className="momento">Los Artistas del momento!</h3>
+                    <h3 className="momento">Los Artistas del momento</h3>
 
                     <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
                     <section className={this.state.botonRow ? 'flex' : "card-container"} >

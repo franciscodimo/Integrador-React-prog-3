@@ -28,7 +28,7 @@ class Header extends Component{
         return(
             
             <section>
-                <h1 className="nombreApp">Título/ Nombre de la app</h1>
+                <h1 className="nombreApp"> Nombre de la app</h1>
                 <p className="ordenar">Ordenar ASC/ DESC</p>
                 <i className="fas fa-align-justify"onClick={()=>this.props.botonRow(this.props.boton)}></i>
                 <i className="fas fa-th"onClick={()=>this.props.botonRow(this.props.boton)}></i>
