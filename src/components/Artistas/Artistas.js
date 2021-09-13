@@ -15,7 +15,7 @@ class Artistas extends Component{
     }
 
     componentDidMount(){
-        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=10';
+        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=';
 
         fetch(url)
             .then( response => response.json() )
@@ -31,7 +31,7 @@ class Artistas extends Component{
     }
 
     addMore(){
-        let proximaUrl = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=20';
+        let proximaUrl = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=30';
 
         fetch(proximaUrl)
             .then( response => response.json() )
