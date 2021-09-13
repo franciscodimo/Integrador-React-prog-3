@@ -59,22 +59,21 @@ class Artistas extends Component{
     }
 
     deleteCard(artistasABorrar){
-        let artistasQueQuedan = this.state.artistas.filter( artista => artista.id !== artistasABorrar );
+        let artistasQueQuedan = this.state.artistasIniciales.filter( artista => artista.id !== artistasABorrar );
 
         this.setState({
-            artistas: artistasQueQuedan
+            artistas: artistasQueQuedan,
+            artistasIniciales: artistasQueQuedan
         })
     }
     
     filtrarArtistas(text){
-        let artistasFiltrados = this.state.artistas.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase()));
+        let artistasFiltrados = this.state.artistasIniciales.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase()));
          this.setState({
             artistas: artistasFiltrados  })
        
     }
 
-
-    //si borro un artista y lo busco, vuelve a aparecer
     //si pongo "más artistas" y luegolo busco, no aparece
 
     render(){
