@@ -8,20 +8,7 @@ class Header extends Component{
         super();
         this.state ={
             filterBy:'',
-            botonRow: false,
              }
-        }
-
-        botonRow(){
-            if(this.state.botonRow){
-                this.setState({
-                    botonRow: false,
-                })
-            }else{
-                this.setState({
-                    botonRow: true,
-                })
-            }
         }
 
     evitarSubmit(e){
@@ -43,8 +30,8 @@ class Header extends Component{
             <section>
                 <h1 className="nombreApp">Título/ Nombre de la app</h1>
                 <p className="ordenar">Ordenar ASC/ DESC</p>
-                <i className="fas fa-align-justify"onClick={()=>this.botonRow()}></i>
-                <i className="fas fa-th"onClick={()=>this.botonRow()}></i>
+                <i className="fas fa-align-justify"onClick={()=>this.props.botonRow(this.props.boton)}></i>
+                <i className="fas fa-th"onClick={()=>this.props.botonRow(this.props.boton)}></i>
                 <form action="Buscar por Nombre" onSubmit={(milanesa)=>this.evitarSubmit(milanesa)}>
                 <input type="text" onChange={(papas)=>this.controlarCambios(papas)} value={this.state.filterBy} placehoder='ingrese su nombre'/>
                 </form>

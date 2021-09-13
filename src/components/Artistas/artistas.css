@@ -10,3 +10,16 @@ button.masArtistas {
 h3.momento {
     margin-bottom: 0;
 }
+
+.flex{
+    display: flex;
+    flex-direction: column;
+
+}
+.card-container{
+   
+}
+.flex article{
+    display: flex;
+    width: 80%;
+}

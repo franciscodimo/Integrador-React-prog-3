@@ -44,6 +44,19 @@ class Artistas extends Component{
             })
             .catch( error => console.log(error))
     }
+   
+    botonRow(botonRow){
+        if(botonRow){
+            this.setState({
+                botonRow: false,
+
+            })
+        }else{
+            this.setState({
+                botonRow: true,
+            })
+        }
+    }
 
     deleteCard(artistasABorrar){
         let artistasQueQuedan = this.state.artistas.filter( artista => artista.id !== artistasABorrar );
@@ -69,13 +82,15 @@ class Artistas extends Component{
             <React.Fragment>
              
                 <div className="row card-container">
-                    <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)}/>
+                    <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)} botonRow= { (botonRow) => this.botonRow(botonRow)}  boton = {this.state.botonRow}/>
+
                 </div>
                 <div className="row card-container">
                     
                     <h3 className="momento">Los Artistas del momento!</h3>
+
                     <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
-                    <section className="card-container">
+                    <section className={this.state.botonRow ? 'flex' : "card-container"} >
                     {
                         this.state.isLoaded === false ? 
                         
