@@ -32,7 +32,6 @@ class Artistas extends Component{
 
     addMore(){
         let url = `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists?index=${this.state.proximaUrl}&limit=10`;
-        
 
         fetch(url)
             .then( response => response.json() )
@@ -72,12 +71,11 @@ class Artistas extends Component{
     
     filtrarArtistas(text){
         let artistasFiltrados = this.state.artistasIniciales.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase()));
-         this.setState({
-            artistas: artistasFiltrados  })
+        this.setState({
+            artistas: artistasFiltrados  
+        })
        
     }
-
-    //si pongo "más artistas" y luegolo busco, no aparece
 
     render(){
         return(
@@ -87,10 +85,9 @@ class Artistas extends Component{
                 </div>
 
                 <div className="row card-container">
-                    
-                    <h2 className="momento">Los Artistas del momento</h2>
-
+                    <h2 className="momento">Tus artistas favoritos </h2>
                     <button className="masArtistas" onClick={()=>this.addMore(this.state.artistas)}>Más artistas</button>
+
                     <section className={this.state.botonRow ? 'flex' : "card-container"} >
                     {
                         this.state.isLoaded === false ? 
@@ -100,6 +97,7 @@ class Artistas extends Component{
                         this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)
                     }
                     </section>
+
                     {
                         this.state.artistas.length === 0 ?
                         <p className="noEncuentra">No se encontraron resultados de busqueda. Intenta otro nombre!</p>:

@@ -8,7 +8,7 @@ class Header extends Component{
         super();
         this.state ={
             filterBy:'',
-             }
+            }
         }
 
     evitarSubmit(e){
@@ -25,20 +25,17 @@ class Header extends Component{
 
     render(){  
         return( 
-
             <section>
                 <img src='../assets/img/eMusic.png' alt=""/>
                 <p className="ordenar">Ordenar ASC/ DESC</p>
                 <i className="fas fa-align-justify" onClick={()=>this.props.botonRow(this.props.boton)}></i>
                 <i className="fas fa-th" onClick={()=>this.props.botonRow(this.props.boton)}></i>
-                <form action="Buscar por Nombre" onSubmit={(milanesa)=>this.evitarSubmit(milanesa)}>
-                <input type="text" onChange={(papas)=>this.controlarCambios(papas)} value={this.state.filterBy} placehoder='ingrese su nombre'/>
+                <form action="Buscar por Nombre" onSubmit={(submit)=>this.evitarSubmit(submit)}>
+                <input type="text" onChange={(filtrado)=>this.controlarCambios(filtrado)} value={this.state.filterBy} placehoder='ingrese su nombre'/>
                 </form>
-            </section> 
-            
+            </section>    
         )
     }
-
 }
 
 export default Header;

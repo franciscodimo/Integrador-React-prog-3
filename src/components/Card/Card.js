@@ -24,6 +24,7 @@ class Card extends Component{
             })
         }
     }
+
     render(){
         return(
             <article>
@@ -33,7 +34,6 @@ class Card extends Component{
                         <i className="far fa-window-close" onClick={()=>this.props.remove(this.props.dataArtistas.id)} ></i>
                         <i className="fas fa-chevron-right"></i>
                     </div>
-                    
                 </section>
                 <main>
                     <img src={this.props.dataArtistas.picture} alt=""/>
@@ -49,7 +49,8 @@ class Card extends Component{
                     </div>
                 </main>
             </article>
-    )}
-        }
+        )
+    }
+}
 
-  export default Card;          
+export default Card;          
