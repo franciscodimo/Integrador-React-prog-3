@@ -29,8 +29,8 @@ class Header extends Component{
             <section>
                 <img src='../assets/img/eMusic.png' alt=""/>
                 <p className="ordenar">Ordenar ASC/ DESC</p>
-                <i className="fas fa-align-justify"onClick={()=>this.props.botonRow(this.props.boton)}></i>
-                <a href="/"><i className="fas fa-th"onClick={()=>this.props.botonRow(this.props.boton)}></i></a>
+                <i className="fas fa-align-justify" onClick={()=>this.props.botonRow(this.props.boton)}></i>
+                <i className="fas fa-th" onClick={()=>this.props.botonRow(this.props.boton)}></i>
                 <form action="Buscar por Nombre" onSubmit={(milanesa)=>this.evitarSubmit(milanesa)}>
                 <input type="text" onChange={(papas)=>this.controlarCambios(papas)} value={this.state.filterBy} placehoder='ingrese su nombre'/>
                 </form>

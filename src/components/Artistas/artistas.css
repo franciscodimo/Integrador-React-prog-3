@@ -19,7 +19,9 @@ button.masArtistas {
     padding: 6px;
     background-color: rgb(150, 169, 230);
     border-radius: 2px;
-    border: 2px solid rgb(150, 169, 230); 
+    border: 2px solid rgb(150, 169, 230);
+    font-size: 17px;
+    font-family: 'Glory', sans-serif;
 }
 
 button.masArtistas:hover {
@@ -35,17 +37,60 @@ p.noEncuentra {
 }
 
 h2.momento {
+    margin-top: 30px;
     margin-bottom: 0;
     margin-left: 1.5%;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .flex{
     display: flex;
     flex-direction: column;
-
 }
 
 .flex article{
+    width: 90%;
+}
+
+.flex .fa-window-close{
+    margin: 0 0 5px 0;
+}
+
+.flex .fa-chevron-left{
+    margin-right: 300px;
+}
+
+.flex .fa-chevron-right{
+    margin-left: 300px;
+}
+
+.flex main{
     display: flex;
-    width: 80%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.flex img{
+    width: 375px;
+    margin: 0 0 0 0;
+    border-radius: 10px;
+}
+
+.flex h3{
+    margin-left: 50px;
+    text-align: start;
+    font-size: 25px;
+}
+
+.flex p{
+    margin-left: 50px;
+}
+
+.flex .verMas{
+    margin-left: 25%;
+    font-size: 15px;
+}
+
+.flex .additional-info{
+    text-align: start;
 }

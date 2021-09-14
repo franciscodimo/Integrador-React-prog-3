@@ -37,15 +37,16 @@ class Card extends Component{
                 </section>
                 <main>
                     <img src={this.props.dataArtistas.picture} alt=""/>
-                    <h3>{this.props.dataArtistas.name}</h3>
-                    <p className="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
-                    <section className={`additional-info ${this.state.verMas ? 'show' : 'hide'}`}>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                    </section>
-                    <button className="verMas" onClick={()=>this.verMas()}>{this.state.text}</button>
-
+                    <div>
+                        <h3>{this.props.dataArtistas.name}</h3>
+                        <p className="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+                        <section className={`additional-info ${this.state.verMas ? 'show' : 'hide'}`}>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                        </section>
+                        <button className="verMas" onClick={()=>this.verMas()}>{this.state.text}</button>
+                    </div>
                 </main>
             </article>
     )}

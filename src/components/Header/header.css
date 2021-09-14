@@ -12,17 +12,18 @@ img {
     width: 20%;
 }
 
-i.fa-align-justify {
+.fa-align-justify {
     margin-right: 20px;
     margin-top: 2px;
     color: black;
    
 }
+
 i.card-container{
     flex-direction: row;
 }
 
-a i.fa-th {
+.fa-th {
     margin-right: 40px;
     margin-top: 2px;
     color: black;
@@ -32,7 +33,21 @@ p.ordenar {
     margin-right: 60px;
     margin-top: 2px;
     margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
 }
 .nombreAPP{
     border-style: solid;
 }
+
+input {
+    border-radius: 9px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: white;
+    padding-left: 7px;
+    opacity: 0.5;
+}
+
+input:hover {
+    opacity: 1.0;
+  }
