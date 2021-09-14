@@ -8,14 +8,14 @@ class Artistas extends Component{
         super()
         this.state={
          artistas: [],
-         proximaUrl: '',
+         proximaUrl: 11,
          artistasIniciales:[],
          isLoaded: false  //cuando se renderiza, al principio no hay ningún dato
         }
     }
 
     componentDidMount(){
-        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=';
+        let url = "https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists?index=1&limit=10";
 
         fetch(url)
             .then( response => response.json() )
@@ -31,15 +31,17 @@ class Artistas extends Component{
     }
 
     addMore(){
-        let proximaUrl = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists&top?limit=30';
+        let url = `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists?index=${this.state.proximaUrl}&limit=10`;
+        
 
-        fetch(proximaUrl)
+        fetch(url)
             .then( response => response.json() )
             .then( data => {
                 console.log(data);
                 this.setState({
                     artistas: this.state.artistas.concat(data.data),
-                    proximaUrl:data.data,
+                    artistasIniciales: this.state.artistasIniciales.concat(data.data),
+                    proximaUrl: this.state.proximaUrl + 10,
                 })
             })
             .catch( error => console.log(error))
@@ -80,11 +82,10 @@ class Artistas extends Component{
     render(){
         return(
             <React.Fragment>
-             
                 <div className="row header">
-                    <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)} botonRow= { (botonRow) => this.botonRow(botonRow)}  boton = {this.state.botonRow}/>
-
+                    <Header filtrarArtistas={(text)=>this.filtrarArtistas(text)} botonRow={(botonRow) => this.botonRow(botonRow)}  boton={this.state.botonRow}/>
                 </div>
+
                 <div className="row card-container">
                     
                     <h2 className="momento">Los Artistas del momento</h2>
@@ -105,7 +106,6 @@ class Artistas extends Component{
                         ''
 
                     }
-            
                 </div>
             </React.Fragment>
         )
