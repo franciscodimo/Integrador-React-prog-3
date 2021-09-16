@@ -9,9 +9,14 @@ class Artistas extends Component{
         this.state={
          artistas: [],
          proximaUrl: 11,
+<<<<<<< HEAD
          artistasIniciales:[], //este artistas iniciales lo usamos porque cuando nosotros filtramos, si no tenemos el listado con los artistas iniciales, el componente padre se va a quedar solo con los elementos filtrados
          isLoaded: false,  //cuando se renderiza, al principio no hay ningún dato
          ordenarTarjetas: false,
+=======
+         artistasIniciales:[],
+         isLoaded: false
+>>>>>>> d0312ec1df6c60431faca7d80cc1609129e7c699
         }
     }
 
@@ -22,7 +27,7 @@ class Artistas extends Component{
             .then( response => response.json() )
             .then( data => {
                 console.log(data);
-                this.setState({     //setState para que se actualicen los artistas
+                this.setState({
                     artistas:  data.data,
                     artistasIniciales: data.data, //entonces para poder hacer lo de la linea 12 hay que decirle a la api que valor va a tener el array artistasIniciales (que va a ser todo el array que trae la api)
                     isLoaded: true

@@ -16,8 +16,13 @@ img {
     margin-right: 20px;
     margin-top: 2px;
     color: black;
-   
 }
+
+.fa-align-justify:hover {
+    cursor:pointer;
+    color: white;
+}
+
 
 i.card-container{
     flex-direction: row;
@@ -27,6 +32,12 @@ i.card-container{
     margin-right: 40px;
     margin-top: 2px;
     color: black;
+
+}
+
+.fa-th:hover {
+    cursor:pointer;
+    color: white;
 }
 
 p.ordenar {
@@ -41,11 +52,13 @@ p.ordenar {
 
 input {
     border-radius: 9px;
-    border: 2px solid black;
     box-sizing: border-box;
     background-color: white;
     padding-left: 7px;
     opacity: 0.5;
+    border: none;
+    height: 30px;
+    width: 300px;
 }
 
 input:hover {
