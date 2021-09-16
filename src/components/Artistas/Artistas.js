@@ -10,7 +10,7 @@ class Artistas extends Component{
          artistas: [],
          proximaUrl: 11,
          artistasIniciales:[],
-         isLoaded: false  //cuando se renderiza, al principio no hay ningún dato
+         isLoaded: false
         }
     }
 
@@ -21,7 +21,7 @@ class Artistas extends Component{
             .then( response => response.json() )
             .then( data => {
                 console.log(data);
-                this.setState({     //setState para que se actualicen los artistas
+                this.setState({
                     artistas:  data.data,
                     artistasIniciales: data.data,
                     isLoaded: true
