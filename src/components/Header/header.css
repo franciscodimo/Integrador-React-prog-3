@@ -11,6 +11,10 @@ img {
     margin: auto auto auto 0;
     width: 20%;
 }
+.ordenar{
+     font-weight: bold;
+     margin-right: auto;
+}
 
 .fa-align-justify {
     margin-right: 20px;

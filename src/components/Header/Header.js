@@ -28,8 +28,8 @@ class Header extends Component{
             <section>
                 <img src='../assets/img/eMusic.png' alt=""/>
                 {this.props.flechas ?
-                 <p className="ordenar" onClick = {()=>this.props.ordenarTarjetas()}>Ordenar asc</p> 
-                 :<p className="ordenar" onClick = {()=>this.props.ordenarTarjetas()}>Ordenar desc</p>}
+                 <button className="ordenar" onClick = {()=>this.props.ordenarTarjetas()}>Ordenar asc</button> 
+                 :<button className="ordenar" onClick = {()=>this.props.ordenarTarjetas()}>Ordenar desc</button>}
                 <i className="fas fa-align-justify" onClick={()=>this.props.botonRow(this.props.boton)}></i>
                 <i className="fas fa-th" onClick={()=>this.props.botonRow(this.props.boton)}></i>
                 <form action="Buscar por Nombre" onSubmit={(submit)=>this.evitarSubmit(submit)}> 
