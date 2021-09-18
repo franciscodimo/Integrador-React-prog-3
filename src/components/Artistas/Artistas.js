@@ -9,8 +9,8 @@ class Artistas extends Component{
         this.state={
          artistas: [],
          proximaUrl: 11,
-         artistasIniciales:[], //este artistas iniciales lo usamos porque cuando nosotros filtramos, si no tenemos el listado con los artistas iniciales, el componente padre se va a quedar solo con los elementos filtrados
-         isLoaded: false,  //cuando se renderiza, al principio no hay ningún dato
+         artistasIniciales:[], 
+         isLoaded: false,  
          ordenarTarjetas: false,
         }
     }
@@ -24,7 +24,7 @@ class Artistas extends Component{
                 console.log(data);
                 this.setState({
                     artistas:  data.data,
-                    artistasIniciales: data.data, //entonces para poder hacer lo de la linea 12 hay que decirle a la api que valor va a tener el array artistasIniciales (que va a ser todo el array que trae la api)
+                    artistasIniciales: data.data, 
                     isLoaded: true
                 })   
             })
@@ -62,16 +62,16 @@ class Artistas extends Component{
     }
 
     deleteCard(artistasABorrar){
-        let artistasQueQuedan = this.state.artistasIniciales.filter( artista => artista.id !== artistasABorrar ); //filtro artistasIniciales porque es el array que se va a "pisar con el filtrado"
+        let artistasQueQuedan = this.state.artistasIniciales.filter( artista => artista.id !== artistasABorrar ); 
 
         this.setState({
-            artistas: artistasQueQuedan, //aca actualizo personajes, para que de esa forma pueda ir de atras para adelante y viceversa
-            artistasIniciales: artistasQueQuedan //en este caso lo que hacemos es actualizar el array artistasIniciales con artistasQueQuedan porque cuando borramos un artista nos 
+            artistas: artistasQueQuedan, 
+            artistasIniciales: artistasQueQuedan 
         })
     }
     
     filtrarArtistas(text){
-        let artistasFiltrados = this.state.artistasIniciales.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase())); //personajes.name es la card //variable donde tengo solo los personajes que yo quiero //el metodo includes nos va a devolver un dato de tipo booleano (entonces si en el texto que yo filtro aparece algun artista, el includes me debe devolver un true si, no esta un false) y le ponemos un toLowercase para que los datos nos los traiga todo en minuscula osea para homogenizar el formato de la info
+        let artistasFiltrados = this.state.artistasIniciales.filter( artista => artista.name.toLowerCase().includes(text.toLowerCase())); 
         this.setState({
             artistas: artistasFiltrados  
         })
@@ -108,7 +108,6 @@ class Artistas extends Component{
            })
         }
      }
-     //en la linea 95 lo que hacemos con el filtrarArtistas es pasar la funcion como prop para poder usarlo en el componente "hijo" que en este caso seria el header
 
     render(){
         return(
