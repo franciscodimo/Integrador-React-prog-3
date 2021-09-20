@@ -126,7 +126,7 @@ class Artistas extends Component{
                         
                         <h2>Cargando artistas...</h2> :
                         
-                        this.state.artistas.map((artista, i) => <Card key={artista.name + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)
+                        this.state.artistas.map((artista, i) => <Card key={artista + i} dataArtistas= {artista} remove={(artistasABorrar)=>this.deleteCard(artistasABorrar)}/>)
                     }
                     </section>
 
