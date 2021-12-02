@@ -12,6 +12,7 @@ class Artistas extends Component{
          artistasIniciales:[], 
          isLoaded: false,  
          ordenarTarjetas: false,
+         botonRow: false,
         }
     }
 
